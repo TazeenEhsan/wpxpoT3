@@ -1,0 +1,333 @@
+body{
+    margin: 120px 120px 120px 150px;
+    border: 2px solid black;
+    padding: 30px;
+}
+
+
+/* p-1  */
+
+
+.triangle {
+    position: relative;
+    transform: scale(var(--ggs,4));
+    width: 22px;
+    height: 24px;
+    border-left: 3px solid transparent;
+    border-bottom: 3px solid black;
+    margin: 20px;  
+}
+
+.triangle,
+.triangle::before {
+    display: block;
+    box-sizing: border-box;
+    border-right: 3px solid transparent;
+    
+}
+   
+.triangle::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-left: 3px solid;
+    border-top: 3px solid;
+    border-bottom: 3px solid transparent;
+    transform: rotate(45deg) skew(10deg,10deg);
+    left: -2px;
+    /* color: aqua; */
+    /* bottom: -12px; */
+    top: 14px;
+} 
+
+
+/* p-2  */
+
+.battery{
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 60px;
+    margin-top: 130px;
+    border: 3px solid;
+    border-radius: 2px;
+}
+.battery::after{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 10px;
+    border: 3.7px solid;
+    border-bottom-color: white;
+    top:-18px;
+    left: 15px;
+}
+
+
+/* p-3  */
+
+
+.three-line{
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 10px;
+    height: 50px;
+    border: 2px solid ;
+    background-color: black;
+    margin-top: 130px;
+    border-radius: 2px;
+}
+.three-line::after{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 30px;
+    border: 3px solid;
+    background-color: black;
+    left: 13px;
+    top:12px;
+    border-radius: 2px;
+
+
+}
+.three-line::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 30px;
+    border: 3px solid ;
+    background-color: black;
+    left: -20px;
+    top:12px;
+    border-radius: 2px;
+}
+
+
+
+
+/* P-4 */
+.u-shape {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid;
+    border-top: 0;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    transform: scale(var(--ggs,3));
+    margin-top: 130px;
+    
+}
+
+
+/* p-5 */
+.dot-triangle{
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 18px;
+    height: 18px;
+    border: 3px solid black;
+    border-radius: 20px;
+    margin-top: 130px;
+    background-color: black;
+
+}
+.dot-triangle::before{
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: black;
+    left: -23px;
+    top: 23px;
+}
+.dot-triangle::after{
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: 3px solid black;
+    background-color: black;
+    border-radius: 20px;
+    right: -23px;
+    top: 23px;
+}
+
+
+/* p-6  */
+
+.square{
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 68px;
+    height: 58px;
+    border: 3px solid ;
+    margin-top: 70px;
+    padding: 8px;
+    border-radius: 2px;
+
+}
+.square::after{
+    content: "";
+    position: absolute;
+    width: 42px;
+    height: 5px;
+    border: 3px solid black;
+    background-color: black;
+    top: 10px;
+    border-radius: 2px;
+    
+
+}
+.square::before{
+    content: "";
+    position: absolute;
+    width: 42px;
+    height: 5px;
+    border: 3px solid black;
+    background-color: black;
+    top: 30px;
+    border-radius: 2px;
+}
+
+@keyframes example {
+    /* from {
+        border-left-color: red;
+    }
+
+    to {
+        border-right-color: rgb(46, 202, 93);
+    } */
+
+  100%   {border-left-color: blue; }
+  25%  {border-top-color: blue; }
+  50%  {border-right-color: blue; }
+  75%  {border-bottom-color: blue;}
+}
+
+.circle{
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 168px;
+    height: 168px;
+    border-radius: 168px;
+    margin-top: 70px;
+    border:18px solid transparent;
+    /* border-top:18px solid #0c10d3; */
+    /* border-right:18px solid #5657a0; */
+    background: linear-gradient(to right, #170979 10%, rgba(255, 255, 255, 0) 42%);
+
+    animation:animation 2s linear infinite;
+    border-color: #0c10d3;
+    border-right: 18px solid rgb(241, 222, 222);
+    /* border-image: linear-gradient(to top, white 18%, blue 100%) 1; */
+
+}
+
+@keyframes animation
+{
+  0%
+  {
+    transform:rotate(0deg);
+  }
+  100%
+  {
+    transform:rotate(360deg);
+  }
+}
+
+.circle2 {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    /* border: 2px solid red; */
+    background-color: white;
+    /* background-color: rgb(159, 240, 159); */
+    
+}
+.circle2::before {
+    border-radius: 100%;
+    content: '';
+    background-image: linear-gradient(to right bottom, white 18%, blue 100%);
+    top: -20px;
+    left: -20px;
+    bottom: -20px;
+    right: -20px;
+    position: absolute;
+    z-index:-1;
+    animation:animation 2s linear infinite;
+    /* border: 2px solid red; */
+}
+
+
+.loader {
+    font-size: 10px;
+    margin: 50px auto;
+    text-indent: -9999em;
+    width: 14em;
+    height: 14em;
+    border-radius: 50%;
+    background: linear-gradient(to right, #170979 10%, rgba(255, 255, 255, 0) 42%);
+    position: relative;
+    animation: load3 1.4s infinite linear;
+
+  }
+  .loader:before {
+    width: 50%;
+    height: 50%;
+    background: #170979;
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+  }
+  .loader:after {
+    background: #fff;
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  @keyframes load3 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  .round{
+      width: 22px;
+      height: 18px;
+      display: block;
+      background-color: #170979;
+      border-radius: 50%;
+      right: -57px;
+      top: 0px;
+      position: relative;
+  }
